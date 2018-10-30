@@ -23,14 +23,19 @@ namespace InternShipTest
         }
         public Knowledge KnowledgeStud
         {
-            get;  set;
+            get {
+                return knowledge; }
+            set
+            {
+                knowledge = value;
+            }
            
         }
 
 
         public void getStudent()
         {
-            Console.WriteLine("Student " + name + " has level knowlge " + knowledge.level);
+            Console.WriteLine("Student " + name + " has level knowlge " + this.knowledge.level);
         }
 
     }

@@ -1,0 +1,7 @@
+C:\Users\sasha_000\source\repos\InternShipTest\InternShipTest\bin\Debug\InternShipTest.exe.config
+C:\Users\sasha_000\source\repos\InternShipTest\InternShipTest\bin\Debug\InternShipTest.exe
+C:\Users\sasha_000\source\repos\InternShipTest\InternShipTest\bin\Debug\InternShipTest.pdb
+C:\Users\sasha_000\source\repos\InternShipTest\InternShipTest\obj\Debug\InternShipTest.csprojAssemblyReference.cache
+C:\Users\sasha_000\source\repos\InternShipTest\InternShipTest\obj\Debug\InternShipTest.csproj.CoreCompileInputs.cache
+C:\Users\sasha_000\source\repos\InternShipTest\InternShipTest\obj\Debug\InternShipTest.exe
+C:\Users\sasha_000\source\repos\InternShipTest\InternShipTest\obj\Debug\InternShipTest.pdb
