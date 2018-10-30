@@ -16,15 +16,22 @@ namespace InternShipTest
         {
 
         }
-        public void setKnowledge(Knowledge knowledge)
-        {
-            this.knowledge = knowledge;
-        }
         public Student(String name, Knowledge knowledge)
         {
             this.name = name;
-            this.knowledge = knowledge;
+            this.KnowledgeStud = knowledge;
         }
-       
+        public Knowledge KnowledgeStud
+        {
+            get;  set;
+           
+        }
+
+
+        public void getStudent()
+        {
+            Console.WriteLine("Student " + name + " has level knowlge " + knowledge.level);
+        }
+
     }
 }
