@@ -22,10 +22,7 @@ namespace InternShipTest
 
             foreach (Student student in university.getStudentArray())
             {
-                if ((student.KnowledgeStud.level == Knowledge.knowledgeLevel.AboveMedium) || (student.KnowledgeStud.level == Knowledge.knowledgeLevel.High))
-                {
-                    students.Add(student);
-                }
+                this.addStudent(student);
             }
         }
 
@@ -36,8 +33,6 @@ namespace InternShipTest
             {
                 students.Add(student);
             }
-            else
-                Console.WriteLine("This student cann`t is added, he doesn`t have necessary knowledge level");
         }
 
         public void setStudent(Student student)
@@ -45,12 +40,9 @@ namespace InternShipTest
             //I don`t understand what this method should do
         }
 
-        public void getStudents()
+        public List<string> getStudents()
         {
-            foreach (Student student in students)
-            {
-                student.getStudent();
-            }
+            return University.getStudents(students);
         }
     }
 }

@@ -10,29 +10,23 @@ namespace InternShipTest
     {
         static void Main(string[] args)
         {
-            University university = new University("CH.U.I.");
-            university.addStudent(new Student("Andrew Kostenko", new Knowledge(Knowledge.knowledgeLevel.AboveMedium)));
-            university.addStudent(new Student("Julia Veselkina", new Knowledge(Knowledge.knowledgeLevel.High)));
-            university.addStudent(new Student("Maria Perechrest", new Knowledge(Knowledge.knowledgeLevel.Medium)));
+            //Create and fill new university
+            University university = University.initialUniversity("CH.U.I.");
 
-            Student studentUniver = new Student("Alex Valmosh");
-            studentUniver.KnowledgeStud = new Knowledge(Knowledge.knowledgeLevel.BelowMedium);
-            university.addStudent(studentUniver);
-            Console.WriteLine("List of university's students:");
-            university.getStudents();
-
-            Console.WriteLine("------------------------------------------------------");
-
+            //Create and fill new internship
             Internship internship = new Internship("Interlink");
             internship.addStudents(university);
-            Console.WriteLine("List of internship's students:");
-            internship.getStudents();
-            Console.WriteLine("------------------------------------------------------");
+            
+           //Add new internship`s student
             Student studentInern = new Student("Anton Pylypenko");
             studentInern.KnowledgeStud = new Knowledge(Knowledge.knowledgeLevel.AboveMedium);
             internship.addStudent(studentInern);
-            Console.WriteLine("List of internship's students after add new student:");
-            internship.getStudents();
+
+            List<string> studentsUniver, studentsIntern;
+            //List of university's students
+            studentsUniver = university.getStudents();
+            //List of internship's students
+            studentsIntern = internship.getStudents();
         }
     }
 }

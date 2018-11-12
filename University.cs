@@ -22,12 +22,19 @@ namespace InternShipTest
             //I don`t understand what this method should do
         }
 
-        public void getStudents()
+        public List<string> getStudents()
         {
+           return University.getStudents(students);
+        }
+
+        public static List<string> getStudents(List<Student> students)
+        {
+            List<string> studentsUniver = new List<string>();
             foreach (Student student in students)
             {
-                student.getStudent();
+                studentsUniver.Add(student.ToString());
             }
+            return studentsUniver;
         }
 
         public void addStudent(Student student)
@@ -39,6 +46,16 @@ namespace InternShipTest
         {
             List<Student> copyStudents = new List<Student>(students);
             return copyStudents;
+        }
+
+        public static University initialUniversity(string name)
+        {
+            University university = new University(name);
+            university.addStudent(new Student("Andrew Kostenko", new Knowledge(Knowledge.knowledgeLevel.AboveMedium)));
+            university.addStudent(new Student("Julia Veselkina", new Knowledge(Knowledge.knowledgeLevel.High)));
+            university.addStudent(new Student("Maria Perechrest", new Knowledge(Knowledge.knowledgeLevel.Medium)));
+            university.addStudent(new Student("Alex Valmosh", new Knowledge(Knowledge.knowledgeLevel.BelowMedium)));
+            return university;
         }
     }
 }

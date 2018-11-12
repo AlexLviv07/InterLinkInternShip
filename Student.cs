@@ -32,10 +32,9 @@ namespace InternShipTest
            
         }
 
-
-        public void getStudent()
+        public override string ToString()
         {
-            Console.WriteLine("Student " + name + " has level knowlge " + this.knowledge.level);
+            return String.Format("Student " + name + " has level knowlge " + this.knowledge.level);
         }
 
     }
